@@ -1,4 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zod Todo App
+
+A simple and elegant todo application built with Next.js and Zod for robust data validation. Manage your tasks with confidence knowing that all data is properly validated and type-safe.
+
+## Features
+
+- ✅ **Create, Read, Update, Delete** todos with full CRUD functionality
+- 🛡️ **Zod Validation** - All input data is validated using Zod schemas for type safety
+- 🎨 **Modern UI** - Clean, responsive design with Tailwind CSS
+- ⚡ **Real-time Updates** - Instant feedback for all todo operations
+- 📱 **Mobile Friendly** - Responsive design that works on all devices
+- 🔍 **Error Handling** - Comprehensive error handling with user-friendly messages
+
+## Tech Stack
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **Zod** - Schema validation and type inference
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Beautiful icons
 
 ## Getting Started
 
@@ -16,21 +35,28 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How Zod Validation Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app uses Zod schemas to ensure data integrity:
 
-## Learn More
+- **Todo Schema**: Validates todo structure with id, title, description, completion status, and timestamps
+- **Input Validation**: All user inputs are validated before processing
+- **Type Safety**: TypeScript types are automatically inferred from Zod schemas
+- **Error Messages**: Clear validation error messages guide users to correct input
 
-To learn more about Next.js, take a look at the following resources:
+Check out `src/lib/schemas.ts` to see the validation rules in action.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/                 # Next.js app router pages and API routes
+├── components/          # Reusable React components
+└── lib/                # Zod schemas and utilities
+```
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
